@@ -1,0 +1,48 @@
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 6px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent calc(100% / 21 - 2px),
+      darkgrey calc(100% / 21 - 2px),
+      darkgrey calc(100% / 21)
+    );
+    pointer-events: none;
+  }
+}
+
+.delete-task-button {
+  background-color: #ff0000;
+  color: #ffffff;
+  grid-column: 2/3;
+}
+
+.add-task {
+  &-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 6px;
+    height: 3rem;
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+}

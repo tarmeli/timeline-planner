@@ -1,0 +1,41 @@
+.task-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 3rem;
+
+  button {
+    width: 100%;
+  }
+}
+
+.task {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  place-content: center;
+
+  &-name {
+    display: flex;
+    place-content: center;
+    flex-grow: 1;
+  }
+}
+
+.drag-task-date {
+  width: 1rem;
+  background: white;
+  margin: 4px;
+  cursor: col-resize;
+  border-radius: 5px;
+}
+
+.tasks-grid_cell {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background: brown;
+  text-align: center;
+  z-index: 2;
+  flex-grow: 1;
+}
